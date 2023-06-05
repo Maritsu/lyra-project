@@ -1,2 +1,2 @@
-# lyra-project
-An alternatuve mobile app for the Polish online grading system, Librus
+# lyra_project
+An alternative mobile app for the Polish online grading system, Librus
