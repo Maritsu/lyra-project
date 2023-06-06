@@ -16,4 +16,28 @@
 #
 # ============================================================================ #
 
-# NOTE: this file will only be used if we need an extra wrapper for the API.
+from PySide6 import QtCore, QtWidgets, QtGui
+
+class MainWindow(QtWidgets.QWidget):
+    def __init__(self):
+        super().__init__()
+
+        self.fcbarcelona=0
+        somelabel = QtWidgets.QLabel("mi unpa e mama sina",alignment=QtCore.Qt.AlignCenter)
+        self.fuckcount = QtWidgets.QLabel(f"count:{self.fcbarcelona}",alignment=QtCore.Qt.AlignCenter)
+        layout = QtWidgets.QVBoxLayout(self)
+        btn = QtWidgets.QPushButton("o unpa e ona!!")
+        layout.addWidget(somelabel)
+        layout.addWidget(self.fuckcount)
+        layout.addWidget(btn)
+
+        btn.clicked.connect(self.fuc)
+
+        self.setLayout(layout)
+
+    @QtCore.Slot()
+    def fuc(self):
+        print("*mi o unpa e mama sina*")
+        self.fcbarcelona+=1
+        self.fuckcount.setText(f"count:{self.fcbarcelona}")
+

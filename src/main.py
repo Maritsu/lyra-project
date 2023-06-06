@@ -15,3 +15,16 @@
 # lyra. If not, see <https://www.gnu.org/licenses/>.
 #
 # ============================================================================ #
+
+import sys
+import librus as api
+import ui.mainwindow as mw
+
+if __name__ == '__main__':
+    print('jan ale o toki!')
+    app = mw.QtWidgets.QApplication([])
+    print('your mother')
+    widget = mw.MainWindow()
+    widget.show()
+
+    sys.exit(app.exec())
