@@ -20,7 +20,7 @@ from PySide6.QtUiTools import QUiLoader
 from PySide6.QtCore import QFile, QIODevice
 from PySide6.QtWidgets import QWidget
 
-def getFileLoader(filename:str) -> QWidget:
+def loadFileWidget(filename:str) -> QWidget:
     filename = f"src/ui/{filename}.ui"
     f = QFile(filename)
     if not f.open(QIODevice.OpenModeFlag.ReadOnly):
