@@ -32,3 +32,7 @@ def loadFileWidget(filename:str) -> QWidget:
     if not widget:
         print(loader.errorString())
     return widget
+
+def loadAllFiles() -> dict[str, QWidget]:
+    from glob import glob
+    return {str(f):loadFileWidget(f.split('/')[2][:-3]) for f in glob('src/ui/*.ui')}
