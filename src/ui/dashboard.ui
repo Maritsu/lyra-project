@@ -29,7 +29,7 @@
     <item>
      <widget class="QPushButton" name="sidebar_btn">
       <property name="text">
-       <string>PushButton</string>
+       <string>[open sidebar]</string>
       </property>
      </widget>
     </item>
@@ -95,7 +95,7 @@
        </sizepolicy>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string>[messages]</string>
       </property>
      </widget>
     </item>
@@ -108,7 +108,7 @@
        </sizepolicy>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string>[calendar]</string>
       </property>
      </widget>
     </item>
@@ -121,7 +121,7 @@
        </sizepolicy>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string>[home screen]</string>
       </property>
      </widget>
     </item>
@@ -134,7 +134,7 @@
        </sizepolicy>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string>[grades]</string>
       </property>
      </widget>
     </item>
@@ -147,7 +147,7 @@
        </sizepolicy>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string>[show feed]</string>
       </property>
      </widget>
     </item>
