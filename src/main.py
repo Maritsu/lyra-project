@@ -19,4 +19,4 @@
 import librus as api
 
 if __name__ == '__main__':
-    print('jan ale o toki!')
+    print("test app")
