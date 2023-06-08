@@ -18,7 +18,7 @@
 
 from PySide6.QtUiTools import QUiLoader
 from PySide6.QtCore import QFile, QIODevice
-from PySide6.QtWidgets import QWidget
+from PySide6.QtWidgets import QWidget, QFrame
 
 def loadFileWidget(filename:str) -> QWidget:
     filename = f"src/ui/{filename}.ui"
@@ -36,3 +36,20 @@ def loadFileWidget(filename:str) -> QWidget:
 def loadAllFiles() -> dict[str, QWidget]:
     from glob import glob
     return {str(f):loadFileWidget(f.split('/')[2][:-3]) for f in glob('src/ui/*.ui')}
+
+def setScreen(name:str, parent:QWidget) -> bool:
+    # Get replacement widget
+    widget = loadFileWidget(name)
+    if widget == QWidget():
+        return False
+
+    # Get center frame
+    frame:QFrame = parent.findChildren(QFrame, "center_frm")[0]
+
+    # Add new section
+    try:
+        frame.layout().addWidget(widget)
+        return True
+    except:
+        print(f"An error occured while changing the layout to {name}")
+        return False
