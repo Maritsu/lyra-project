@@ -25,6 +25,6 @@ from PySide6 import QtWidgets
 if __name__ == '__main__':
     print('jan ale o toki!')
     app = QtWidgets.QApplication(sys.argv)
-    w = ui.loadFileWidget('dashboard')
+    w = ui.loadFileWidget('mainscr')
     w.show()
     sys.exit(app.exec())
