@@ -23,7 +23,6 @@ import sys
 from PySide6 import QtWidgets
 
 if __name__ == '__main__':
-    print('jan ale o toki!')
     app = QtWidgets.QApplication(sys.argv)
     screen = ui.loadFileWidget('mainscr')
     screen.show()

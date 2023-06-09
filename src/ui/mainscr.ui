@@ -28,7 +28,7 @@
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <layout class="QHBoxLayout" name="horizontalLayout">
+     <layout class="QHBoxLayout" name="topbar_lay">
       <item>
        <widget class="QPushButton" name="tb_scr_btn">
         <property name="sizePolicy">
@@ -82,7 +82,7 @@
      <property name="lineWidth">
       <number>0</number>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_6">
+     <layout class="QVBoxLayout" name="center_lay">
       <property name="leftMargin">
        <number>0</number>
       </property>
@@ -106,7 +106,7 @@
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <layout class="QGridLayout" name="gridLayout">
+     <layout class="QGridLayout" name="botbar_lay">
       <item row="0" column="0">
        <widget class="QPushButton" name="bb_db_btn">
         <property name="sizePolicy">

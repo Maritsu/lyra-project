@@ -46,6 +46,11 @@ def setScreen(name:str, parent:QWidget) -> bool:
     # Get center frame
     frame:QFrame = parent.findChildren(QFrame, "center_frm")[0]
 
+    # Clear previous section
+    for c in frame.children():
+        if c.objectName() != "center_lay":
+            c.deleteLater()
+
     # Add new section
     try:
         frame.layout().addWidget(widget)
