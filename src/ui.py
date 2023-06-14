@@ -38,13 +38,20 @@ def loadAllFiles() -> dict[str, QWidget]:
     return {str(f):loadFileWidget(f.split('/')[2][:-3]) for f in glob('src/ui/*.ui')}
 
 def setScreen(name:str, parent:QWidget) -> bool:
+    # Note that the parent should be the main screen widget!
+    # Otherwise this function will NOT WORK
+
     # Get replacement widget
     widget = loadFileWidget(name)
     if widget == QWidget():
         return False
 
     # Get center frame
-    frame:QFrame = parent.findChildren(QFrame, "center_frm")[0]
+    framelist:list[QFrame] = parent.findChildren(QFrame, "center_frm")
+    if len(framelist) > 0:
+        frame:QFrame = framelist[0]
+    else:
+        return False
 
     # Clear previous section
     for c in frame.children():
