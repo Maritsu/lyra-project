@@ -17,6 +17,16 @@
 # ============================================================================ #
 
 import librus as api
+import ui
+
+import sys
+from PySide6 import QtWidgets
 
 if __name__ == '__main__':
-    print("test app")
+    app = QtWidgets.QApplication(sys.argv)
+    screen = ui.loadFileWidget('mainscr')
+    screen.show()
+
+    ui.setScreen('dashboard', screen)
+
+    sys.exit(app.exec())
