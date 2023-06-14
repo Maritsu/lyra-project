@@ -21,7 +21,9 @@ from PySide6.QtCore import QFile, QIODevice
 from PySide6.QtWidgets import QWidget, QFrame
 
 def loadFileWidget(filename:str) -> QWidget:
-    filename = f"src/ui/{filename}.ui"
+    from os import getcwd
+    filename = f"src/ui/{filename}.ui" if not getcwd().endswith("src") else f"ui/{filename}.ui"
+    
     f = QFile(filename)
     if not f.open(QIODevice.OpenModeFlag.ReadOnly):
         print(f"Cannot open {filename}: {f.errorString()}")
